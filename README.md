@@ -21,9 +21,9 @@ If you want to learn more about creating good readme files then refer the follow
 
 
 Execute migrations from the terminal
-dotnet ef migrations add "Initial" --project ./Module.Huespet.Infrastructure --startup-project ./Module.Huespet.Server -o Persistence/Migrations/ --context HuespetDbContext
-dotnet ef database update "Initial" --project ./Module.Huespet.Infrastructure --startup-project ./Module.Huespet.Server
+dotnet ef migrations add "Initial" --project ./Module.WorkItemService.Infrastructure --startup-project ./Module.WorkItemService -o Persistence/Migrations/ --context WorkItemDbContext
+dotnet ef database update "Initial" --project ./Module.WorkItemService.Infrastructure --startup-project ./Module.WorkItemService
 
 Running migrations from the package management console
-Add-Migration "Initial" -Project Module.Huespet.Infrastructure -StartupProject Module.Huespet.Server -o Persistence/Migrations/ -context HuespetDbContext
-Update-Database -Project Module.Huespet.Infrastructure -StartupProject Module.Huespet.Server
+Add-Migration "Initial" -Project Module.WorkItemService.Infrastructure -StartupProject Module.WorkItemService -o Persistence/Migrations/ -context WorkItemDbContext
+Update-Database -Project Module.WorkItemService.Infrastructure -StartupProject Module.WorkItemService
