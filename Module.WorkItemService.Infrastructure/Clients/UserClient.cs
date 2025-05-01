@@ -14,8 +14,7 @@ public class UserClient:IUserClient
 
     public async Task<List<string>> GetActiveUsersAsync()
     {
-        //define uri in appsettings
-        //TODO
+        //TODO define uri in appsettings
         var users = await _httpClient.GetFromJsonAsync<List<string>>("https://localhost:7205/api/Users");
         return users ?? new List<string>();
     }

@@ -45,7 +45,5 @@ namespace Module.WorkItemService.Controllers
         [HttpGet("stats")]
         public async Task<IActionResult> GetStats() => Ok(await _service.GetPendingStatsAsync());
         
-
-       
     }
 }

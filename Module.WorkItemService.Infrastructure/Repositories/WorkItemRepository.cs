@@ -61,8 +61,7 @@ public class WorkItemRepository:IWorkItemRepository
 
     public async Task<Dictionary<string, UserWorkItemStats>> GetPendingStatsByUserAsync()
     {
-        
-
+       
         var query = await _context.WorkItems
         .Where(w => w.Status == WorkItemStatusEnum.Pending && w.AssignedToUsername != null)
         .GroupBy(w => w.AssignedToUsername!)

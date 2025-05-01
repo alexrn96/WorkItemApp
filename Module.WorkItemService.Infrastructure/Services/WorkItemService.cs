@@ -60,7 +60,6 @@ public class WorkItemService : IWorkItemService
             eligibleUsers = eligibleUsers
                 .OrderBy(u => stats.TryGetValue(u, out var s) ? s.TotalPending : 0);
         }
-
         item.AssignedToUsername = eligibleUsers.FirstOrDefault();
         await _repository.AddAsync(item);
 
